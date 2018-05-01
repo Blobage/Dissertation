@@ -197,15 +197,14 @@ public class Generation : MonoBehaviour
             exits.AddRange(exitsTemp);
             exitsTemp.Clear();
         } 
-            
-       
     }	
     /// <summary>
     /// The Error handeling of the tiles placed in the world
+    /// This method systematicly goes through the lists of tiles in the world and compares them to
+    /// each other. If they are differnet then turn one off/Remove it from the game them off
     /// </summary>
     void ErrorChecking()
     {
-        //Debug.Log("Placed Tiles" + placedTiles.Count);
         int temp = placedTiles.Count;
         placedTemp.AddRange(placedTiles);
         for (int i = 0; i < temp; i++)
